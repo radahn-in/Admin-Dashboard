@@ -7,6 +7,11 @@ body {
   font-family: Roboto, "sans-serif";
 }
 
+svg {
+  width: 50px;
+  height: 50px;
+}
+
 .container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -18,7 +23,7 @@ body {
   grid-area: 1 / 1 / 6 /2;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: repeat(3, 1fr);
+  grid-template-rows: minmax(auto-fit, 300px) 1fr 1fr;
   padding: 30px;
   border-radius: 5%;
 }
@@ -49,8 +54,41 @@ body {
   grid-area: 1 / 2 / 2 / 5;
   background-color: hotpink;
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: 1fr;
   grid-template-rows: repeat(2, 1fr);
+}
+
+.top-header {
+  grid-area: 1 / 1 /2 /2;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: 1fr;
+}
+
+
+.search {
+  grid-area: 1 / 1 /2 /2;
+}
+
+#search {
+  grid-area: 1 / 2 /2 /4;
+}
+
+.notification {
+  grid-area: 1/ 5 / 2 / 6;
+}
+
+.profile-pic {
+  grid-area: 1 / 6 /2 /7;
+
+}
+
+.user {
+  grid-area: 1 /7 /2 /8;
+}
+
+.bottom-header {
+  grid-area: 2 / 1 /3 2;
 }
 
 .main-content {
@@ -59,6 +97,7 @@ body {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, 1fr);
+  gap: 15px;
 }
 
 .projects {
@@ -78,7 +117,15 @@ body {
   background-color: #FFFFFF;
   color: black;
   text-align: center;
-  border-radius: 5%;
+  border-radius: 10px;
+  margin-left: 10px;
+  border: 10px solid white;
+  border-left-color: #ffb300;
+}
+
+.projects .card>svg {
+  width: 30px;
+  height: 30px;
 }
 
 .card p {
@@ -91,6 +138,8 @@ body {
   grid-column: 3/ 4;
   grid-row: 2/ 3;
   grid-area: 1 / 3 / 2 /4;
+  background-color: #ffffff;
+  border-radius: 5%;
 }
 
 .trending {
