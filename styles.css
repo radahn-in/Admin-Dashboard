@@ -152,10 +152,27 @@ svg {
   height: 30px;
 }
 
-.card p {
+.icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  width: 90%;
+}
+
+h6 {
   font-size: 18px;
-  text-align: center;
-  padding: 5px;
+}
+
+.card p {
+  font-size: 14px;
+  color: #737373;
+  margin: 10px 0;
+}
+
+h4 {
+  margin-left: 25px;
+  margin-top: 20px;
 }
 
 .announcements {
