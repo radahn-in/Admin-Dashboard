@@ -119,20 +119,32 @@ svg {
 }
 
 
-.main-content {}
+.main-content {
+  background-color: #d4d4d4;
+  display: grid;
+  grid-template-columns: 70% 30%;
+}
 
-.projects {}
+.cards {
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
 
-
-.projects .card {
-  height: 200px;
-  background-color: #FFFFFF;
+.card {
+  height: 150px;
+  width: 80%;
+  background-color: white;
   color: black;
   text-align: center;
+  margin: 15px 0;
+  margin-left: 20px;
+  border-left: 5px solid #facc15;
   border-radius: 10px;
-  margin-left: 10px;
-  border: 10px solid white;
-  border-left-color: #ffb300;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding-left: 10px;
 }
 
 .projects .card>svg {
